@@ -53,3 +53,39 @@ func (md *MD) Save() {
 	defer f.Close()
 	f.WriteString(md.body)
 }
+
+func (md *MD) Ordered_List(ol *MD_List) {
+	for i, item := range ol.Items {
+		md.body += fmt.Sprintf("%d. ", i+1) + item + "\n"
+	}
+}
+
+func (md *MD) Unordered_List(ol *MD_List) {
+	for _, item := range ol.Items {
+		md.body += "- " + item + "\n"
+	}
+}
+
+func (md *MD) Block_Quote(bq *MD_BlockQuote) {
+	for _, line := range bq.Text {
+		md.body += "> " + line + "\n"
+	}
+}
+
+func (md *MD) Table(table *MD_Table) {
+	md.body += "| "
+	var dashes string
+	for _, header := range table.Headers {
+		md.body += header + " | "
+		dashes += "---|"
+	}
+	md.body += "\n"
+	md.body += "|" + dashes + "\n"
+	for _, row := range table.Rows {
+		md.body += "| "
+		for _, cell := range row {
+			md.body += cell + " | "
+		}
+		md.body += "\n"
+	}
+}
