@@ -2,14 +2,14 @@ package MD_Builder
 
 func New_Table() *MD_Table {
 	return &MD_Table{
-		Headers: []string{},
+		Headers: []Table_Header{},
 		Rows:    [][]string{},
 	}
 }
 
-func (table *MD_Table) Table_Headers(a ...interface{}) {
-	for _, header := range a {
-		table.Headers = append(table.Headers, header.(string))
+func (table *MD_Table) Table_Headers(Headers []Table_Header) {
+	for _, header := range Headers {
+		table.Headers = append(table.Headers, header)
 	}
 }
 

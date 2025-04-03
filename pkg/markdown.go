@@ -77,8 +77,17 @@ func (md *MD) Table(table *MD_Table) {
 	md.body += "| "
 	var dashes string
 	for _, header := range table.Headers {
-		md.body += header + " | "
-		dashes += "---|"
+		md.body += header.Header + " | "
+		if header.Allignment == "left" || header.Allignment == "l" {
+			dashes += ":---|"
+		} else if header.Allignment == "right" || header.Allignment == "r" {
+			dashes += "---:|"
+		} else if header.Allignment == "center" || header.Allignment == "c" {
+			dashes += ":---:|"
+		} else {
+			dashes += "---|"
+		}
+
 	}
 	md.body += "\n"
 	md.body += "|" + dashes + "\n"

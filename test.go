@@ -7,7 +7,7 @@ func main() {
 	MD.H_n(1, "test")
 	MD.Plain_Text("Plain text test")
 	Table1 := MD_Builder.New_Table()
-	Table1.Table_Headers("a", "b", "c")
+	Table1.Table_Headers([]MD_Builder.Table_Header{{Header: "LEFT", Allignment: "l"}, {Header: "b", Allignment: "center"}, {Header: "rightish", Allignment: "r"}})
 	Table1.Table_Rows([][]string{{"1", "2", "3"}, {"4", "5", "6"}})
 	MD.Table(Table1)
 	Unord_list := MD_Builder.New_List()

@@ -1,7 +1,7 @@
 # test
 Plain text test
-| a | b | c | 
-|---|---|---|
+| LEFT | b | rightish | 
+|:---|:---:|---:|
 | 1 | 2 | 3 | 
 | 4 | 5 | 6 | 
 - a

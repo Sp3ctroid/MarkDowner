@@ -7,7 +7,7 @@ type MD struct {
 }
 
 type MD_Table struct {
-	Headers []string
+	Headers []Table_Header
 	Rows    [][]string
 }
 
@@ -23,4 +23,9 @@ type MD_BlockQuote struct {
 type MD_CodeBlock struct {
 	Code     string
 	Language string
+}
+
+type Table_Header struct {
+	Header     string
+	Allignment string
 }
