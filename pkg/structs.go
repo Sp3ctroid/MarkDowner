@@ -16,5 +16,11 @@ type MD_List struct {
 }
 
 type MD_BlockQuote struct {
-	Text []string
+	Text  []string
+	Level int
+}
+
+type MD_CodeBlock struct {
+	Code     string
+	Language string
 }

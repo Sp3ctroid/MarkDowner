@@ -3,6 +3,7 @@ package MD_Builder
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func (md *MD) LineBreak() {
@@ -68,7 +69,7 @@ func (md *MD) Unordered_List(ol *MD_List) {
 
 func (md *MD) Block_Quote(bq *MD_BlockQuote) {
 	for _, line := range bq.Text {
-		md.body += "> " + line + "\n"
+		md.body += strings.Repeat(">", bq.Level) + " " + line + "\n"
 	}
 }
 
@@ -88,4 +89,8 @@ func (md *MD) Table(table *MD_Table) {
 		}
 		md.body += "\n"
 	}
+}
+
+func (md *MD) CodeBlock(cb *MD_CodeBlock) {
+	md.body += cb.Code
 }

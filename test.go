@@ -17,11 +17,21 @@ func main() {
 	Ord_list.Fill_List(MD_Builder.Bold_Italic("a"), MD_Builder.Bold("b"), MD_Builder.Italic("c"))
 	MD.Ordered_List(Ord_list)
 	BQ := MD_Builder.New_BlockQuote()
-	BQ.Fill_BlockQuote("Sweet Pumpkin Pie")
+	BQ.Fill_BlockQuote("Sweet Pumpkin Pie", 1)
 	MD.LineBreak()
 	MD.Block_Quote(BQ)
 	MD.LineBreak()
 	MD.Plain_Text(MD_Builder.Strike_Through("Strike through test"))
+
+	Code_block := MD_Builder.New_CodeBlock()
+	Code_block.Fill_CodeBlock(`package main
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}`, "go")
+	MD.CodeBlock(Code_block)
+
 	MD.SetDestFolder("test.md")
 	MD.Save()
 }

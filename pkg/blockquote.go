@@ -6,6 +6,8 @@ func New_BlockQuote() *MD_BlockQuote {
 	}
 }
 
-func (bq *MD_BlockQuote) Fill_BlockQuote(text string) {
+func (bq *MD_BlockQuote) Fill_BlockQuote(text string, level int) {
 	bq.Text = append(bq.Text, text)
+	bq.Level = level
+
 }
