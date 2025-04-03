@@ -14,3 +14,11 @@ Plain text test
 > Sweet Pumpkin Pie
 
 ~~Strike through test~~
+```go
+package main
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+```
