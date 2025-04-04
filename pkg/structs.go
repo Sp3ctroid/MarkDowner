@@ -29,3 +29,13 @@ type Table_Header struct {
 	Header     string
 	Allignment string
 }
+
+type Image struct {
+	Source string
+}
+
+type Complex_List struct {
+	Items    []string
+	Level    int
+	Ordering string
+}

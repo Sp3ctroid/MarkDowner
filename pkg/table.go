@@ -8,9 +8,7 @@ func New_Table() *MD_Table {
 }
 
 func (table *MD_Table) Table_Headers(Headers []Table_Header) {
-	for _, header := range Headers {
-		table.Headers = append(table.Headers, header)
-	}
+	table.Headers = append(table.Headers, Headers...)
 }
 
 func (table *MD_Table) Table_Rows(Rows [][]string) {

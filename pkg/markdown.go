@@ -103,3 +103,13 @@ func (md *MD) Table(table *MD_Table) {
 func (md *MD) CodeBlock(cb *MD_CodeBlock) {
 	md.body += cb.Code
 }
+
+func (md *MD) Image(image *Image, image_name string) {
+	md.body += "![" + image_name + "](" + image.Source + ")"
+}
+
+func (md *MD) Complex_List(cl *Complex_List) {
+	for _, item := range cl.Items {
+		md.body += item + "\n"
+	}
+}

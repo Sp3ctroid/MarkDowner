@@ -32,6 +32,15 @@ func main() {
 }`, "go")
 	MD.CodeBlock(Code_block)
 
+	MD.Plain_Text(MD_Builder.Linkify("Google Test Link", "https://google.com"))
+
+	Complext_list1 := MD_Builder.New_Complex_List(1, "ordered")
+	Complext_list2 := MD_Builder.New_Complex_List(2, "unordered")
+
+	Complext_list1.Fill_List(MD_Builder.Bold_Italic("a"), MD_Builder.Bold("b"), MD_Builder.Italic("c"))
+	Complext_list2.Fill_List("a", "b", "c")
+
+	MD.Complex_List(MD_Builder.Connect_Complex_List(Complext_list1, Complext_list2, 1))
 	MD.SetDestFolder("test.md")
 	MD.Save()
 }
