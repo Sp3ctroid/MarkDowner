@@ -37,9 +37,9 @@ Numbering for ordered part depends on level of item. When you go down one level,
 	- b
 - c
 	- d
-2. e 	**Index doesn't reset after unordered part**
+2. e 	```Index doesn't reset after unordered part```
 	1. f
-3. g 	**Here index resets for level 2 ordered part**
+3. g 	```Here index resets for level 2 ordered part```
 	1. h
 	2. X
 4. A
@@ -58,8 +58,11 @@ This is a WIP. No leveling support yet
 # TEXT FORMAT
 
 ~~Strike through test~~
+
 ***Bold Italic test***
+
 **Bold test**
+
 *Italic test*
 
 ---
@@ -79,3 +82,11 @@ func main() {
 # LINK
 
 [Google Test Link](https://google.com)
+
+# ALERTS
+
+[!WARNING]Warning test
+
+[!IMPORTANT]Important test
+
+[!NOTE]Note test

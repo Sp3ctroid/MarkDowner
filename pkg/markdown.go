@@ -104,10 +104,10 @@ func (md *MD) Image(image *Image, image_name string) {
 
 func (md *MD) Alert(name string, text string) {
 	if name == "Warning" {
-		md.body += "[!WARNING]" + text
+		md.body += "[!WARNING]" + text + "\n"
 	} else if name == "Important" {
-		md.body += "[!IMPORTANT]" + text
+		md.body += "[!IMPORTANT]" + text + "\n"
 	} else if name == "Note" {
-		md.body += "[!NOTE]" + text
+		md.body += "[!NOTE]" + text + "\n"
 	}
 }

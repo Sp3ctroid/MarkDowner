@@ -64,6 +64,14 @@ func main() {
 
 	MD.Plain_Text(MD_Builder.Linkify("Google Test Link", "https://google.com"))
 
+	MD.LineBreak()
+	MD.Alert("Warning", "Warning test")
+	MD.LineBreak()
+	MD.Alert("Important", "Important test")
+	MD.LineBreak()
+	MD.Alert("Note", "Note test")
+	MD.LineBreak()
+
 	MD.SetDestFolder("test.md")
 	MD.Save()
 }
