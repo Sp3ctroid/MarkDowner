@@ -71,6 +71,10 @@ func main() {
 	MD.LineBreak()
 	MD.Alert("Note", "Note test")
 	MD.LineBreak()
+	MD.Alert("Tip", "Tip test")
+	MD.LineBreak()
+	MD.Alert("Caution", "Caution test")
+	MD.LineBreak()
 
 	MD.SetDestFolder("test.md")
 	MD.Save()

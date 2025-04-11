@@ -93,3 +93,9 @@ func main() {
 
 >[!NOTE]
 >Note test
+
+>[!TIP]
+>Tip test
+
+>[!CAUTION]
+>Caution test

@@ -109,5 +109,9 @@ func (md *MD) Alert(name string, text string) {
 		md.body += ">[!IMPORTANT]" + "\n" + ">" + text + "\n"
 	} else if name == "Note" {
 		md.body += ">[!NOTE]" + "\n" + ">" + text + "\n"
+	} else if name == "Tip" {
+		md.body += ">[!TIP]" + "\n" + ">" + text + "\n"
+	} else if name == "Caution" {
+		md.body += ">[!CAUTION]" + "\n" + ">" + text + "\n"
 	}
 }
