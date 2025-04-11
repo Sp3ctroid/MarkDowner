@@ -42,6 +42,10 @@ Numbering for ordered part depends on level of item. When you go down one level,
 3. g 	```Here index resets for level 2 ordered part```
 	1. h
 	2. X
+		1. XAXAXA ```Go up to level 3```
+		2. JAJAJA
+	3. BACK TO LEVEL 2
+		1. Cool ```After going back to level 2, index for 3rd level is reset and for level 2 is remained until we go back to level 1```
 4. A
 5. B
 

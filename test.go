@@ -36,6 +36,10 @@ func main() {
 		{"g", 1, "ordered"},
 		{"h", 2, "ordered"},
 		{"X", 2, "ordered"},
+		{"XAXAXA", 3, "ordered"},
+		{"JAJAJA", 3, "ordered"},
+		{"BACK TO LEVEL 2", 2, "ordered"},
+		{"Cool", 3, "ordered"},
 		{"A", 1, "ordered"},
 		{"B", 1, "ordered"},
 	}, false)
