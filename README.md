@@ -85,8 +85,11 @@ func main() {
 
 # ALERTS
 
-[!WARNING]Warning test
+>[!WARNING]
+>Warning test
 
-[!IMPORTANT]Important test
+>[!IMPORTANT]
+>Important test
 
-[!NOTE]Note test
+>[!NOTE]
+>Note test
