@@ -55,15 +55,9 @@ func (md *MD) Save() {
 	f.WriteString(md.body)
 }
 
-func (md *MD) Ordered_List(ol *MD_List) {
-	for i, item := range ol.Items {
-		md.body += fmt.Sprintf("%d. ", i+1) + item + "\n"
-	}
-}
-
-func (md *MD) Unordered_List(ol *MD_List) {
-	for _, item := range ol.Items {
-		md.body += "- " + item + "\n"
+func (md *MD) List(list *MD_List) {
+	for _, item := range list.Items {
+		md.body += item + "\n"
 	}
 }
 
@@ -108,8 +102,12 @@ func (md *MD) Image(image *Image, image_name string) {
 	md.body += "![" + image_name + "](" + image.Source + ")"
 }
 
-func (md *MD) Complex_List(cl *Complex_List) {
-	for _, item := range cl.Items {
-		md.body += item + "\n"
+func (md *MD) Alert(name string, text string) {
+	if name == "Warning" {
+		md.body += "[!WARNING]" + text
+	} else if name == "Important" {
+		md.body += "[!IMPORTANT]" + text
+	} else if name == "Note" {
+		md.body += "[!NOTE]" + text
 	}
 }

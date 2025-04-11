@@ -12,7 +12,14 @@ type MD_Table struct {
 }
 
 type MD_List struct {
-	Items []string
+	Items     []string
+	level_idx []int
+}
+
+type MD_List_Item struct {
+	Item     string
+	Level    int
+	Ordering string
 }
 
 type MD_BlockQuote struct {
@@ -32,10 +39,4 @@ type Table_Header struct {
 
 type Image struct {
 	Source string
-}
-
-type Complex_List struct {
-	Items    []string
-	Level    int
-	Ordering string
 }
